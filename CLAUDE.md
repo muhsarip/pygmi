@@ -8,8 +8,8 @@ PYGMI is a text-to-image generator web application. Users can create images from
 
 ## Tech Stack
 
-- **Frontend/Backend**: Next.js (App Router)
-- **Styling**: Tailwind CSS
+- **Frontend/Backend**: Next.js 16 (App Router, TypeScript)
+- **Styling**: Tailwind CSS v4
 - **Database**: Supabase (PostgreSQL)
 - **Auth**: Supabase Auth
 - **Storage**: Supabase Storage
@@ -32,7 +32,7 @@ npm run lint     # Run linter
 ### Key Directories
 - `app/api/` - API routes for auth, generate, images, credits
 - `components/` - UI components organized by feature (auth, generator, gallery, layout)
-- `lib/` - Client configurations (supabase.js, replicate.js)
+- `lib/` - Client configurations (supabase.ts, replicate.ts)
 - `hooks/` - Custom React hooks (useAuth, useCredits)
 
 ### Database Tables

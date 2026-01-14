@@ -31,18 +31,22 @@ export default function ImageGrid({ images, loading }: ImageGridProps) {
   return (
     <div className="grid grid-cols-2 gap-4">
       {images.map((url, index) => (
-        <div key={index} className="relative group">
+        <div
+          key={index}
+          className="relative group magic-appear"
+          style={{ animationDelay: `${index * 0.15}s` }}
+        >
           <img
             src={url}
             alt={`Generated image ${index + 1}`}
-            className="w-full aspect-square object-cover rounded-lg"
+            className="w-full aspect-square object-cover rounded-lg shadow-lg"
           />
           <a
             href={url}
             download
             target="_blank"
             rel="noopener noreferrer"
-            className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center text-white"
+            className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center text-white cursor-pointer"
           >
             Download
           </a>

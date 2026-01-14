@@ -16,15 +16,15 @@ const outputCounts: GenerationSettings["numOutputs"][] = [1, 2, 3, 4]
 
 export default function SettingsPanel({ settings, onChange }: SettingsPanelProps) {
   return (
-    <div className="space-y-6">
+    <div className="space-y-5 md:space-y-6">
       <div>
         <label className="block text-sm font-bold mb-3 text-gray-800">Aspect Ratio</label>
-        <div className="flex gap-3">
+        <div className="flex gap-2 md:gap-3">
           {aspectRatios.map((ratio) => (
             <button
               key={ratio}
               onClick={() => onChange({ ...settings, aspectRatio: ratio })}
-              className={`px-6 py-3 rounded-xl border-2 font-semibold transition-all ${
+              className={`px-4 md:px-6 py-2 md:py-3 rounded-xl border-2 font-semibold transition-all text-sm md:text-base cursor-pointer ${
                 settings.aspectRatio === ratio
                   ? "gradient-button text-white border-transparent shadow-lg"
                   : "border-purple-200 hover:border-purple-400 text-gray-700"
@@ -38,12 +38,12 @@ export default function SettingsPanel({ settings, onChange }: SettingsPanelProps
 
       <div>
         <label className="block text-sm font-bold mb-3 text-gray-800">Number of Images</label>
-        <div className="flex gap-3">
+        <div className="flex gap-2 md:gap-3">
           {outputCounts.map((count) => (
             <button
               key={count}
               onClick={() => onChange({ ...settings, numOutputs: count })}
-              className={`w-12 h-12 rounded-xl border-2 font-bold transition-all ${
+              className={`w-10 h-10 md:w-12 md:h-12 rounded-xl border-2 font-bold transition-all cursor-pointer ${
                 settings.numOutputs === count
                   ? "gradient-button text-white border-transparent shadow-lg"
                   : "border-purple-200 hover:border-purple-400 text-gray-700"

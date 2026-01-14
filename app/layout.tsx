@@ -6,8 +6,11 @@ export const metadata = {
   description: "Generate stunning images from text prompts using AI. Transform your ideas into beautiful visuals with PYGMI.",
   keywords: ["AI", "image generator", "text to image", "AI art", "PYGMI"],
   authors: [{ name: "PYGMI" }],
-  themeColor: "#9333EA",
   manifest: "/manifest.json",
+}
+
+export const viewport = {
+  themeColor: "#9333EA",
 }
 
 export default function RootLayout({

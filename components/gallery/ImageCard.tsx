@@ -54,7 +54,7 @@ export default function ImageCard({
 
   return (
     <div
-      className="relative group bg-white rounded-lg overflow-hidden shadow-sm"
+      className="relative group gradient-card rounded-2xl overflow-hidden shadow-xl"
       onMouseEnter={() => setShowActions(true)}
       onMouseLeave={() => setShowActions(false)}
     >
@@ -65,41 +65,41 @@ export default function ImageCard({
       />
 
       {showActions && (
-        <div className="absolute inset-0 bg-black/60 flex flex-col justify-between p-4">
-          <p className="text-white text-sm line-clamp-3">{prompt}</p>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex flex-col justify-end p-4">
+          <p className="text-white text-sm line-clamp-2 mb-4 font-medium">{prompt}</p>
 
           <div className="flex justify-center gap-2">
             <button
               onClick={handleCopy}
-              className="p-2 bg-white/20 rounded-lg hover:bg-white/30 text-white"
+              className="p-2.5 bg-white/20 backdrop-blur-sm rounded-xl hover:bg-white/30 text-white transition-all hover:scale-110"
               title="Copy prompt"
             >
               <Copy size={18} />
             </button>
             <button
               onClick={() => onReuse(prompt, settings)}
-              className="p-2 bg-white/20 rounded-lg hover:bg-white/30 text-white"
+              className="p-2.5 bg-white/20 backdrop-blur-sm rounded-xl hover:bg-white/30 text-white transition-all hover:scale-110"
               title="Re-use prompt"
             >
               <Play size={18} />
             </button>
             <button
               onClick={() => onRerun(prompt, settings)}
-              className="p-2 bg-white/20 rounded-lg hover:bg-white/30 text-white"
+              className="p-2.5 bg-white/20 backdrop-blur-sm rounded-xl hover:bg-white/30 text-white transition-all hover:scale-110"
               title="Rerun generation"
             >
               <RefreshCw size={18} />
             </button>
             <button
               onClick={handleDownload}
-              className="p-2 bg-white/20 rounded-lg hover:bg-white/30 text-white"
+              className="p-2.5 bg-white/20 backdrop-blur-sm rounded-xl hover:bg-white/30 text-white transition-all hover:scale-110"
               title="Download"
             >
               <Download size={18} />
             </button>
             <button
               onClick={() => onDelete(id)}
-              className="p-2 bg-red-500/50 rounded-lg hover:bg-red-500/70 text-white"
+              className="p-2.5 bg-red-500/70 backdrop-blur-sm rounded-xl hover:bg-red-500 text-white transition-all hover:scale-110"
               title="Delete"
             >
               <Trash2 size={18} />

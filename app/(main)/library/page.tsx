@@ -97,7 +97,7 @@ export default function LibraryPage() {
         {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
           <div
             key={i}
-            className="aspect-square bg-gray-200 rounded-lg animate-pulse"
+            className="aspect-square bg-gradient-to-br from-purple-200 to-pink-200 rounded-2xl animate-pulse"
           />
         ))}
       </div>
@@ -106,10 +106,12 @@ export default function LibraryPage() {
 
   if (images.length === 0) {
     return (
-      <div className="text-center py-12">
-        <h2 className="text-xl font-medium text-gray-700">No images yet</h2>
-        <p className="text-gray-500 mt-2">
-          Generate some images to see them here
+      <div className="text-center py-12 gradient-card rounded-2xl p-12">
+        <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+          No images yet
+        </h2>
+        <p className="text-gray-600 mt-4 text-lg">
+          ✨ Generate some magical images to see them here
         </p>
       </div>
     )
@@ -117,7 +119,9 @@ export default function LibraryPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-6">My Generations</h1>
+      <h1 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+        My Generations
+      </h1>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {images.map((image) => (
           <ImageCard

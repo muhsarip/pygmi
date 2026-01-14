@@ -19,15 +19,15 @@ export default function GenerateButton({
     <button
       onClick={onClick}
       disabled={disabled || loading}
-      className="w-full py-3 px-6 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+      className="w-full py-4 px-6 gradient-button text-white rounded-2xl font-bold text-lg shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
     >
       {loading ? (
         <>
-          <Loader2 size={20} className="animate-spin" />
+          <Loader2 size={24} className="animate-spin" />
           Generating...
         </>
       ) : (
-        <>Generate - {cost} Credit</>
+        <>✨ Generate - {cost} Credit</>
       )}
     </button>
   )

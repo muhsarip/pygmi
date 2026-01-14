@@ -53,8 +53,8 @@ export default function ImaginePage() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
-      <div className="bg-white rounded-lg p-6 shadow-sm">
+    <div className="max-w-4xl mx-auto space-y-6">
+      <div className="gradient-card rounded-2xl p-6 shadow-xl">
         <PromptInput
           value={prompt}
           onChange={setPrompt}
@@ -63,7 +63,7 @@ export default function ImaginePage() {
         />
       </div>
 
-      <div className="bg-white rounded-lg p-6 shadow-sm">
+      <div className="gradient-card rounded-2xl p-6 shadow-xl">
         <SettingsPanel settings={settings} onChange={setSettings} />
       </div>
 
@@ -74,8 +74,10 @@ export default function ImaginePage() {
         cost={1}
       />
 
-      <div className="bg-white rounded-lg p-6 shadow-sm">
-        <h2 className="text-lg font-medium mb-4">Generated Images</h2>
+      <div className="gradient-card rounded-2xl p-6 shadow-xl">
+        <h2 className="text-xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+          Generated Images
+        </h2>
         <ImageGrid images={generatedImages} loading={loading} />
       </div>
     </div>

@@ -18,16 +18,16 @@ export default function SettingsPanel({ settings, onChange }: SettingsPanelProps
   return (
     <div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium mb-2">Aspect Ratio</label>
-        <div className="flex gap-2">
+        <label className="block text-sm font-bold mb-3 text-gray-800">Aspect Ratio</label>
+        <div className="flex gap-3">
           {aspectRatios.map((ratio) => (
             <button
               key={ratio}
               onClick={() => onChange({ ...settings, aspectRatio: ratio })}
-              className={`px-4 py-2 rounded-lg border ${
+              className={`px-6 py-3 rounded-xl border-2 font-semibold transition-all ${
                 settings.aspectRatio === ratio
-                  ? "bg-blue-600 text-white border-blue-600"
-                  : "border-gray-300 hover:bg-gray-50"
+                  ? "gradient-button text-white border-transparent shadow-lg"
+                  : "border-purple-200 hover:border-purple-400 text-gray-700"
               }`}
             >
               {ratio}
@@ -37,16 +37,16 @@ export default function SettingsPanel({ settings, onChange }: SettingsPanelProps
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-2">Number of Images</label>
-        <div className="flex gap-2">
+        <label className="block text-sm font-bold mb-3 text-gray-800">Number of Images</label>
+        <div className="flex gap-3">
           {outputCounts.map((count) => (
             <button
               key={count}
               onClick={() => onChange({ ...settings, numOutputs: count })}
-              className={`w-10 h-10 rounded-lg border ${
+              className={`w-12 h-12 rounded-xl border-2 font-bold transition-all ${
                 settings.numOutputs === count
-                  ? "bg-blue-600 text-white border-blue-600"
-                  : "border-gray-300 hover:bg-gray-50"
+                  ? "gradient-button text-white border-transparent shadow-lg"
+                  : "border-purple-200 hover:border-purple-400 text-gray-700"
               }`}
             >
               {count}
@@ -56,14 +56,14 @@ export default function SettingsPanel({ settings, onChange }: SettingsPanelProps
       </div>
 
       <div>
-        <label className="flex items-center gap-3 cursor-pointer">
+        <label className="flex items-center gap-3 cursor-pointer p-4 rounded-xl hover:bg-purple-50 transition-colors">
           <input
             type="checkbox"
             checked={settings.hdr}
             onChange={(e) => onChange({ ...settings, hdr: e.target.checked })}
-            className="w-5 h-5 rounded border-gray-300"
+            className="w-6 h-6 rounded border-purple-300"
           />
-          <span className="font-medium">HDR Mode</span>
+          <span className="font-bold text-gray-800">✨ HDR Mode</span>
         </label>
       </div>
     </div>

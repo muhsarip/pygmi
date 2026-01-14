@@ -30,43 +30,43 @@ export default function PromptInput({
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-5">
       <div>
-        <label className="block text-sm font-medium mb-2">Prompt</label>
+        <label className="block text-sm font-bold mb-3 text-gray-800">✨ Your Prompt</label>
         <textarea
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          placeholder="Describe the image you want to generate..."
+          placeholder="Describe the magical image you want to create..."
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+          className="w-full px-4 py-3 border-2 border-purple-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none transition-all"
         />
-        <div className="text-right text-sm text-gray-500 mt-1">
+        <div className="text-right text-sm text-purple-600 font-semibold mt-2">
           {value.length} characters
         </div>
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-2">
-          Reference Image (optional)
+        <label className="block text-sm font-bold mb-3 text-gray-800">
+          📸 Reference Image (optional)
         </label>
         {referenceImage ? (
           <div className="relative inline-block">
             <img
               src={referenceImage}
               alt="Reference"
-              className="h-24 rounded-lg object-cover"
+              className="h-28 rounded-2xl object-cover shadow-lg border-2 border-purple-200"
             />
             <button
               onClick={() => onReferenceChange(null)}
-              className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600"
+              className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-red-400 to-red-600 text-white rounded-full flex items-center justify-center hover:shadow-lg transition-all"
             >
-              <X size={14} />
+              <X size={16} />
             </button>
           </div>
         ) : (
           <button
             onClick={() => fileInputRef.current?.click()}
-            className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50"
+            className="flex items-center gap-2 px-5 py-3 border-2 border-purple-200 rounded-xl hover:border-purple-400 hover:bg-purple-50 transition-all font-semibold text-gray-700"
           >
             <Upload size={18} />
             Upload Reference

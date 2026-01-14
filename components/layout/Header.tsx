@@ -57,7 +57,10 @@ export default function Header({ onMenuClick }: HeaderProps) {
           </span>
         </div>
 
-        <button className="hidden md:block px-6 py-2 gradient-button text-white rounded-xl font-medium shadow-lg cursor-pointer">
+        <button
+          onClick={() => router.push("/buy-credits")}
+          className="hidden md:block px-6 py-2 gradient-button text-white rounded-xl font-medium shadow-lg cursor-pointer"
+        >
           Buy Credits
         </button>
 

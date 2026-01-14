@@ -1,0 +1,18 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="12" fill="url(#gradient)"/>
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9333EA"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Main sparkle/star icon -->
+  <path d="M32 12L34.5 24.5L42 20L38 28.5L50 32L38 35.5L42 44L34.5 39.5L32 52L29.5 39.5L22 44L26 35.5L14 32L26 28.5L22 20L29.5 24.5L32 12Z" fill="white"/>
+
+  <!-- Small sparkles -->
+  <circle cx="18" cy="18" r="2" fill="white" opacity="0.8"/>
+  <circle cx="46" cy="18" r="2" fill="white" opacity="0.8"/>
+  <circle cx="18" cy="46" r="2" fill="white" opacity="0.8"/>
+  <circle cx="46" cy="46" r="2" fill="white" opacity="0.8"/>
+</svg>

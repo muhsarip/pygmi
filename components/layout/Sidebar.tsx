@@ -31,16 +31,23 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
       {/* Sidebar */}
       <aside
-        className={`fixed md:static w-64 h-screen gradient-sidebar text-white flex flex-col shadow-2xl z-50 transition-transform duration-300 ${
-          isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
+        className={`fixed md:static w-64 h-screen gradient-sidebar text-white flex flex-col shadow-2xl transition-transform duration-300 ${
+          isOpen ? "translate-x-0 z-[60]" : "-translate-x-full md:translate-x-0 z-50"
         }`}
       >
         <div className="p-6 flex items-center justify-between">
-          <div>
-            <h1 className="text-3xl font-bold text-white drop-shadow-lg">
-              PYGMI
-            </h1>
-            <p className="text-white/90 text-sm mt-1 font-medium">AI Image Generator</p>
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+              <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32 12L34.5 24.5L42 20L38 28.5L50 32L38 35.5L42 44L34.5 39.5L32 52L29.5 39.5L22 44L26 35.5L14 32L26 28.5L22 20L29.5 24.5L32 12Z" fill="white"/>
+              </svg>
+            </div>
+            <div>
+              <h1 className="text-3xl font-bold text-white drop-shadow-lg">
+                PYGMI
+              </h1>
+              <p className="text-white/90 text-xs mt-0.5 font-medium">AI Image Generator</p>
+            </div>
           </div>
           <button
             onClick={onClose}

@@ -119,7 +119,7 @@ export default function LibraryPage() {
 
   return (
     <div>
-      <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+      <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-black">
         My Generations
       </h1>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">

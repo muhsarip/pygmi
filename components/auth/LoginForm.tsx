@@ -38,6 +38,17 @@ export default function LoginForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="text-center mb-8">
+        <div className="flex justify-center mb-4">
+          <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center shadow-xl">
+            <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 12L34.5 24.5L42 20L38 28.5L50 32L38 35.5L42 44L34.5 39.5L32 52L29.5 39.5L22 44L26 35.5L14 32L26 28.5L22 20L29.5 24.5L32 12Z" fill="white"/>
+              <circle cx="18" cy="18" r="2" fill="white" opacity="0.8"/>
+              <circle cx="46" cy="18" r="2" fill="white" opacity="0.8"/>
+              <circle cx="18" cy="46" r="2" fill="white" opacity="0.8"/>
+              <circle cx="46" cy="46" r="2" fill="white" opacity="0.8"/>
+            </svg>
+          </div>
+        </div>
         <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
           Welcome Back
         </h1>

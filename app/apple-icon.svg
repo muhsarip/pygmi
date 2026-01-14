@@ -1,0 +1,18 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="180" rx="40" fill="url(#gradient)"/>
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9333EA"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Main sparkle/star icon -->
+  <path d="M90 30L96 68L115 55L105 80L140 90L105 100L115 125L96 112L90 150L84 112L65 125L75 100L40 90L75 80L65 55L84 68L90 30Z" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Small sparkles -->
+  <circle cx="50" cy="50" r="5" fill="white" opacity="0.8"/>
+  <circle cx="130" cy="50" r="5" fill="white" opacity="0.8"/>
+  <circle cx="50" cy="130" r="5" fill="white" opacity="0.8"/>
+  <circle cx="130" cy="130" r="5" fill="white" opacity="0.8"/>
+</svg>

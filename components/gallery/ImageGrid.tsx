@@ -68,23 +68,23 @@ export default function ImageGrid({ images, loading }: ImageGridProps) {
       {/* Image Modal - Rendered outside using Portal */}
       {selectedImage && typeof window !== 'undefined' && createPortal(
         <div
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] flex items-center justify-center p-4 md:p-8"
           onClick={() => setSelectedImage(null)}
         >
           <div
-            className="relative max-w-5xl max-h-[90vh] w-full"
+            className="relative flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute -top-12 right-0 p-2 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 text-white transition-all"
+              className="absolute -top-12 right-0 p-2 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 text-white transition-all z-10"
             >
               <X size={24} />
             </button>
             <img
               src={selectedImage}
               alt="Generated image"
-              className="w-full h-full object-contain rounded-2xl shadow-2xl"
+              className="max-w-[90vw] max-h-[85vh] object-contain rounded-2xl shadow-2xl"
             />
           </div>
         </div>,
